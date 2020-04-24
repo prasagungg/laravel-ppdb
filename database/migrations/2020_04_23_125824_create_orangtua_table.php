@@ -33,16 +33,16 @@ class CreateOrangtuaTable extends Migration
             $table->string('agama_ibu');
             $table->string('no_telp_ibu');
             
-            $table->string('nama_lengkap_wali');
-            $table->string('tempat_lahir_wali');
-            $table->date('tanggal_lahir_wali');
-            $table->string('pekerjaan_wali');
-            $table->string('pendidikan_terakhir_wali');
-            $table->string('kewarganegaraan_wali');
-            $table->string('agama_wali');
-            $table->string('no_telp_wali');
-            $table->string('hubungan_wali');
-            $table->foreignId('peserta_id');
+            $table->string('nama_lengkap_wali')->nullable();
+            $table->string('tempat_lahir_wali')->nullable();
+            $table->date('tanggal_lahir_wali')->nullable();
+            $table->string('pekerjaan_wali')->nullable();
+            $table->string('pendidikan_terakhir_wali')->nullable();
+            $table->string('kewarganegaraan_wali')->nullable();
+            $table->string('agama_wali')->nullable();
+            $table->string('no_telp_wali')->nullable();
+            $table->string('hubungan_wali')->nullable();
+            $table->foreignId('peserta_id')->nullable();
             $table->timestamps();
         });
     }

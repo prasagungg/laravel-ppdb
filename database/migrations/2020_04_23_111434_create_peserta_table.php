@@ -25,7 +25,7 @@ class CreatePesertaTable extends Migration
             $table->integer('tinggi_badan');
             $table->string('golongan_darah');
             $table->string('alamat');
-            $table->string('keluruhan');
+            $table->string('kelurahan');
             $table->string('kecamatan');
             $table->string('kota_kabupaten');
             $table->string('propinsi');
