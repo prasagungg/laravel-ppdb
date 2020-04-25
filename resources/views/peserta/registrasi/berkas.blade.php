@@ -21,32 +21,82 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="card card-default">
-                <div class="card-header">
-                    <h3 class="card-title">Biodata</h3>
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body" style="display: block;">
-                    <form action="{{ route('orangtua.store') }}" method="post">
-                      @csrf
-                        <div class="row">
-                           <div class="col-md-12">
-                                <div class="custom-file">
-                                    <label>Foto kopi</label>
-                                    <input type="file" class="custom-file-input" id="customFile">
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
-                                </div>
-                           </div>
-                        </div>
-                        <div class="card-footer">
-                          <button type="submit" class="btn btn-block btn-primary">Simpan</button>
-                        </div>
-                    </form>
-                </div>
+    <div class="invoice p-3 mb-3 container-fluid">
+        <!-- title row -->
+        <div class="row">
+            <div class="col-12">
+                <h4>
+                    <i class="fas fa-globe"></i> Daftar Ceria.
+                    <small class="float-right">Tanggal: 25/04/2020</small>
+                </h4>
             </div>
-    </section>
+            <!-- /.col -->
+        </div>
+        <!-- info row -->
+        <div class="row invoice-info">
+            <div class="col-sm-4 invoice-col">
+                <address>
+                    <strong>Kepada</strong><br>
+                    Nama : Agungprasetio<br>
+                    Phone: 081339179955<br>
+                    Email: agungprasetio878@gmail.com><br>
+                    Mohon untuk membawa berkas 
+                </address>
+            </div>
+            <!-- /.col -->
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Table row -->
+        <div class="row">
+            <div class="col-12 table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nomor</th>
+                            <th>Berkas</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Fotokopi Raport SMP Kelas 7-9 Semester 1</td>
+                           
+                        <tr>
+                            <td>2</td>
+                            <td>Fotokopi Akte Kelahiran</td>
+                           
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Fotokopi Kartu Keluarga</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Pas Photo Berwarna ( Berkemeja ) Ukuran : 3 x 4 ( 6 lembar</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- this row will not appear when printing -->
+        <div class="row no-print">
+            <div class="col-12">
+                <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fas fa-print"></i>
+                    Print</a>
+                <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">
+                    <i class="fas fa-download"></i> Generate PDF
+                </button>
+            </div>
+        </div>
+    </div>
     <!-- /.content -->
 </div>
 @endsection
